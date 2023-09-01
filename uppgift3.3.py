@@ -1,7 +1,7 @@
 import random
 
 # Define the ASCII art for each number on the dice
-DICE_ART = {
+#DICE_ART = {
     1: (
         "┌───────┐",
         "│       │",
@@ -56,8 +56,8 @@ while True:
     if a.lower() == 'yes':
         # Display the ASCII art for the rolled number
         print("\nYou rolled a", dice)
-        for line in DICE_ART[dice]:
-            print(line)
+        for x in DICE_ART[dice]:
+            print(x)
     elif a.lower() == 'no':
         print("Okay, thanks for playing!")
         break

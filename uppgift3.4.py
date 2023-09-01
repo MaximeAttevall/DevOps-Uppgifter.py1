@@ -1,6 +1,9 @@
 a = input("skriv in ett land i norden eller i storbritanien: ")
 
-if a.lower() in ["sverige", "finland", "norge", "danmark", "island"]:
+b = ["sverige", "finland", "norge", "danmark", "island"]
+
+
+if a.lower() in b:
     print("Detta land tillhör Norden")
 elif a.lower() in ["england", "wales", "skottland", "nordirland"]:
     print("Detta land tillhör Storbritannien")

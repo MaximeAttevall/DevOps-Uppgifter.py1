@@ -16,6 +16,7 @@ antal_vegan_korv = int(two_vegan_korv)*2 + int(tre_vegan_korv)*3
 antal_drickor = int(two_vanlig_korv) + int(tre_vanlig_korv) + int(two_vegan_korv) + int(tre_vegan_korv)
 
 #Beräkna antalet förpackningar, som behövs köpas in
+#Delar antalet personer med antalet korvar i en förpakcning så vet vi hur många förpacknigar vi behöver, sean avrundar vi det uppåt(för mycket korvar > för lite korvar)
 antal_vanliga_förpackningar_att_köpa = round((int(antal_vanlig_korv) / 8 + 0.5))
 antal_veganska_förpackningar_att_köpa = round((int(antal_vegan_korv) / 4 + 0.5))
 print("--------INKÖPNINGSLISTA--------")

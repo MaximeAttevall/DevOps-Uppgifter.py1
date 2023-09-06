@@ -1,0 +1,5 @@
+print("hej vad är ditt förnamn?")
+name = input()
+print("vad är ditt efternamn?")
+last_name = input()
+print("Trevligt att träffas", name +" "+ last_name)

@@ -1,0 +1,10 @@
+print("ange ett tal, 5 gånger")
+a = int(input("a = "))
+b = int(input("b = "))
+c = int(input("c = "))
+d = int(input("d = "))
+e = int(input("e = "))
+
+numbers = (a,b,c,d,e)
+x = max(numbers)
+print("här är det högsta angivna numret", x)

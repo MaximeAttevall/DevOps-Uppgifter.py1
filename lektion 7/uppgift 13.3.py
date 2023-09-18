@@ -15,26 +15,17 @@ print("Select artist: ")
 artist_input = input("> ").lower()
 print("****************")
 
+
 for artist in artists:
-    if (artist["name"].lower() == artist_input):
+    if artist["name"].lower() == artist_input:
         artist_response = requests.get(url + artist["id"])
         artist_information_dictionary = json.loads(artist_response.text)
 
-        artist_information = artist_information_dictionary["artist"] #vi hämtar ut valuen för artist i dictionaryn
+        artist_information = artist_information_dictionary["artist"]  # vi hämtar ut valuen för artist i dictionaryn
 
-        print("Genres: ", end=" ")
-        for genre in artist_information["genres"]:
-            print(genre, end=", ")
-
-        print("")
-        print("Years Active:", end=" ")
-        for active in artist_information["years_active"]:
-            print(active,end=", ")
-
-        print("")
-        print("Members:", end=" ")
-        for member in artist_information["members"]:
-            print(member,end=", ")
-    else:
-        print(f"{artist_input} is not in the list, try again")
+        print("Genres: ","," .join(artist_information["genres"]))
+        print("Years Active:",", " .join(artist_information["years_active"]))
+        print("Members:","," .join(artist_information["members"]))
         break
+else:
+    print(f"{artist_input} is not in the list, try again")
